@@ -20,32 +20,40 @@ func functionForInputString(inputString: String) -> String? {
     return nil;
 }
 
-func calculateAndPrintAverageForNumbers(components: Array<Int>) {
-    var total = 0;
+func calculateAndPrintAverageForNumbers(components: Array<Double>) {
+    var total = 0.0;
     for number in components {
         total += number;
     }
-    let average : Double = Double(total) / Double(components.count);
+    let average = total / Double(components.count);
     printResult(average);
 }
 
-func calculateAndPrintFactorialForNumbers(components: Array<Int>) {
-    if components.count == 1 {
-        let number = components[0];
-        if number < 0 {
-            print("Factorial must be greater than or equal to zero");
-        } else if number == 0 {
-            printResult(1);
-        } else {
-            var factorial = 1;
-            for index in 1...number {
-                factorial *= index;
-            }
-            printResult(factorial);
-        }
-    } else {
+func calculateAndPrintFactorialForNumbers(components: Array<Double>) {
+    if components.count != 1 {
         print("Factorial Requires Single Value Input");
+        return;
     }
+    
+    let number = components[0];
+    let roundedNumber = Int(round(number));
+    
+    if number % 1 != 0 {
+        print("Taking factorial of input rounded to: \(roundedNumber)");
+    }
+    
+    if roundedNumber < 0 {
+        print("Factorial must be greater than or equal to zero");
+    } else if roundedNumber == 0 {
+        printResult(1);
+    } else {
+        var factorial = 1;
+        for index in 1...roundedNumber {
+            factorial *= index;
+        }
+        printResult(factorial);
+    }
+
 }
 
 func handleFunction(inputString:String, functionString:String) {

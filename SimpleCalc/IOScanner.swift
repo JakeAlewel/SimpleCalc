@@ -15,19 +15,19 @@ func input() -> String {
     return result.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
 }
 
-func convert(incoming: String) -> Int? {
+func convert(incoming: String) -> Double? {
     let numberFromString = NSNumberFormatter().numberFromString(incoming);
     if numberFromString == nil {
         return nil;
     } else {
-        return numberFromString?.integerValue;
+        return numberFromString?.doubleValue;
     }
 }
 
-func arrayOfIntsForInputString(inputString: String) -> Array<Int>? {
+func arrayOfIntsForInputString(inputString: String) -> Array<Double>? {
     let components = inputString.componentsSeparatedByCharactersInSet(NSCharacterSet.whitespaceCharacterSet());
     
-    var convertedComponents = Array<Int>();
+    var convertedComponents = Array<Double>();
     for component in components {
         let number = convert(component);
         if number == nil {
