@@ -37,7 +37,7 @@ func handleOperand(firstInputString : String, operand : String) {
         case "*":
             printResult(firstValue! * secondValue!);
         case "/":
-            printResult(firstValue! / secondValue!);
+            printResult(Double(firstValue!) / Double(secondValue!));
         case "%":
             printResult(firstValue! % secondValue!);
         default:
