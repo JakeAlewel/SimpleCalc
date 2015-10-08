@@ -8,19 +8,23 @@
 
 import Foundation
 
-func operandForInputString(inputOperand : String) -> String? {
-    let validOperands = ["+", "-", "*", "/", "%"];
+func availableOperators() -> Array<String> {
+    return ["+", "-", "*", "/", "%"];
+}
+
+func operatorForInputString(inputOperator : String) -> String? {
+    let validOperators = availableOperators();
     
-    for operand in validOperands {
-        if operand == inputOperand {
-            return operand;
+    for operatorToCheck in validOperators {
+        if operatorToCheck == inputOperator {
+            return operatorToCheck;
         }
     }
     
     return nil;
 }
 
-func handleOperand(firstInputString : String, operand : String) {
+func handleOperator(firstInputString : String, operatorString : String) {
     let firstValue = convert(firstInputString);
     let secondValue = convert(input());
     
@@ -29,7 +33,7 @@ func handleOperand(firstInputString : String, operand : String) {
         return;
     }
 
-    switch operand {
+    switch operatorString {
         case "+":
             printResult(firstValue! + secondValue!);
         case "-":
@@ -41,6 +45,6 @@ func handleOperand(firstInputString : String, operand : String) {
         case "%":
             printResult(firstValue! % secondValue!);
         default:
-            print("Invalid Operand");
+            print("Invalid Operator");
     }
 }
