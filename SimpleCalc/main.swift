@@ -9,21 +9,29 @@
 import Foundation
 
 func doOneCalculation(firstInput : String) {
-    let operationInput : String  = input();
-    let identifiedFunction = functionForInputString(operationInput);
-    let identifiedOperand = operandForInputString(operationInput);
+    let commandInput : String  = input();
+    let identifiedFunction = functionForInputString(commandInput);
+    let identifiedOperator = operatorForInputString(commandInput);
     
     if identifiedFunction != nil {
         handleFunction(firstInput, functionString: identifiedFunction!);
-    } else if identifiedOperand != nil {
-        handleOperand(firstInput, operand: operationInput);
+    } else if identifiedOperator != nil {
+        handleOperator(firstInput, operatorString: identifiedOperator!);
     } else {
         print("Unknown Command");
     }
 }
 
+func availableCommands() -> Array<String> {
+    var commands = Array<String>();
+    commands.appendContentsOf(availableFunctions());
+    commands.appendContentsOf(availableOperators());
+    return commands;
+}
+
 func mainProgram() {
     print("Welcome to SimpleCalc, type exit to quit.");
+    print("The available commands are: \(availableCommands())");
     
     var inputString : String = input();
     while inputString != "exit" {
