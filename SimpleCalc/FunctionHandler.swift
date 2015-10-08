@@ -1,5 +1,5 @@
 //
-//  OperationHandler.swift
+//  FunctionHandler.swift
 //  SimpleCalc
 //
 //  Created by Jacob Alewel on 10/7/15.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-func operationIsInInputString(inputString: String) -> String? {
+func functionForInputString(inputString: String) -> String? {
     let operationKeyWords : Array = ["count", "avg", "fact"];
     
     for keyWord in operationKeyWords {
@@ -19,6 +19,6 @@ func operationIsInInputString(inputString: String) -> String? {
     return nil;
 }
 
-func handleOperation(inputString:String, operationString:String) {
-    print("Found operation")
+func handleFunction(inputString:String, functionString:String) {
+    print("Found operation " + functionString)
 }

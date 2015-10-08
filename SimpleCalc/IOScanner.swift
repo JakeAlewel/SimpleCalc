@@ -1,5 +1,5 @@
 //
-//  InputScanner.swift
+//  IOScanner.swift
 //  SimpleCalc
 //
 //  Created by Jacob Alewel on 10/7/15.
@@ -17,4 +17,8 @@ func input() -> String {
 
 func convert(incoming: String) -> Int {
     return Int(incoming)!;
+}
+
+func printResult(resultValue : Int) {
+    print("Result: \(resultValue)")
 }

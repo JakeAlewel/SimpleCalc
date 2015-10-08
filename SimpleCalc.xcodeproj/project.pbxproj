@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4E0416AF1BC572CE004BB460 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0416AE1BC572CE004BB460 /* main.swift */; };
-		4E0416B61BC57D5E004BB460 /* InputScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0416B51BC57D5E004BB460 /* InputScanner.swift */; settings = {ASSET_TAGS = (); }; };
-		4E0416B81BC58120004BB460 /* OperationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0416B71BC58120004BB460 /* OperationHandler.swift */; settings = {ASSET_TAGS = (); }; };
-		4E0416BA1BC58199004BB460 /* CommandHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0416B91BC58199004BB460 /* CommandHandler.swift */; settings = {ASSET_TAGS = (); }; };
+		4E0416B61BC57D5E004BB460 /* IOScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0416B51BC57D5E004BB460 /* IOScanner.swift */; settings = {ASSET_TAGS = (); }; };
+		4E0416B81BC58120004BB460 /* FunctionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0416B71BC58120004BB460 /* FunctionHandler.swift */; settings = {ASSET_TAGS = (); }; };
+		4E0416BA1BC58199004BB460 /* OperatorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0416B91BC58199004BB460 /* OperatorHandler.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,9 +28,9 @@
 /* Begin PBXFileReference section */
 		4E0416AB1BC572CE004BB460 /* SimpleCalc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SimpleCalc; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E0416AE1BC572CE004BB460 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		4E0416B51BC57D5E004BB460 /* InputScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputScanner.swift; sourceTree = "<group>"; };
-		4E0416B71BC58120004BB460 /* OperationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationHandler.swift; sourceTree = "<group>"; };
-		4E0416B91BC58199004BB460 /* CommandHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandHandler.swift; sourceTree = "<group>"; };
+		4E0416B51BC57D5E004BB460 /* IOScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOScanner.swift; sourceTree = "<group>"; };
+		4E0416B71BC58120004BB460 /* FunctionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionHandler.swift; sourceTree = "<group>"; };
+		4E0416B91BC58199004BB460 /* OperatorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperatorHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,9 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				4E0416AE1BC572CE004BB460 /* main.swift */,
-				4E0416B71BC58120004BB460 /* OperationHandler.swift */,
-				4E0416B91BC58199004BB460 /* CommandHandler.swift */,
-				4E0416B51BC57D5E004BB460 /* InputScanner.swift */,
+				4E0416B71BC58120004BB460 /* FunctionHandler.swift */,
+				4E0416B91BC58199004BB460 /* OperatorHandler.swift */,
+				4E0416B51BC57D5E004BB460 /* IOScanner.swift */,
 			);
 			path = SimpleCalc;
 			sourceTree = "<group>";
@@ -127,10 +127,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E0416BA1BC58199004BB460 /* CommandHandler.swift in Sources */,
+				4E0416BA1BC58199004BB460 /* OperatorHandler.swift in Sources */,
 				4E0416AF1BC572CE004BB460 /* main.swift in Sources */,
-				4E0416B61BC57D5E004BB460 /* InputScanner.swift in Sources */,
-				4E0416B81BC58120004BB460 /* OperationHandler.swift in Sources */,
+				4E0416B61BC57D5E004BB460 /* IOScanner.swift in Sources */,
+				4E0416B81BC58120004BB460 /* FunctionHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

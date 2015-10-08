@@ -8,18 +8,26 @@
 
 import Foundation
 
+func doOneCalculation(firstInput : String) {
+    let operationInput : String  = input();
+    let identifiedFunction = functionForInputString(operationInput);
+    let identifiedOperand = operandForInputString(operationInput);
+    
+    if identifiedFunction != nil {
+        handleFunction(firstInput, functionString: identifiedFunction!);
+    } else if identifiedOperand != nil {
+        handleOperand(firstInput, operand: operationInput);
+    } else {
+        print("Unknown Command");
+    }
+}
+
 func mainProgram() {
     print("Welcome to SimpleCalc, type exit to quit.");
     
     var inputString : String = input();
     while inputString != "exit" {
-        let operationInInput = operationIsInInputString(inputString);
-        if(operationInInput != nil) {
-            handleOperation(inputString, operationString: operationInInput!);
-        } else {
-            handleCommand(inputString);
-        }
-        
+        doOneCalculation(inputString);
         inputString = input();
     }
     
