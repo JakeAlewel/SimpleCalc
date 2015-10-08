@@ -21,20 +21,25 @@ func operandForInputString(inputOperand : String) -> String? {
 }
 
 func handleOperand(firstInputString : String, operand : String) {
-    let firstValue : Int = convert(firstInputString);
-    let secondValue : Int = convert(input());
+    let firstValue = convert(firstInputString);
+    let secondValue = convert(input());
+    
+    if firstValue == nil || secondValue == nil {
+        print("Invalid Value Input(s)")
+        return;
+    }
 
     switch operand {
         case "+":
-            printResult(firstValue + secondValue);
+            printResult(firstValue! + secondValue!);
         case "-":
-            printResult(firstValue - secondValue);
+            printResult(firstValue! - secondValue!);
         case "*":
-            printResult(firstValue * secondValue);
+            printResult(firstValue! * secondValue!);
         case "/":
-            printResult(firstValue / secondValue);
+            printResult(firstValue! / secondValue!);
         case "%":
-            printResult(firstValue % secondValue);
+            printResult(firstValue! % secondValue!);
         default:
             print("Invalid Operand Switch");
     }
