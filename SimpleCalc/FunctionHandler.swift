@@ -16,6 +16,7 @@ func functionForInputString(inputString: String) -> String? {
             return keyWord;
         }
     }
+    
     return nil;
 }
 
@@ -31,7 +32,9 @@ func calculateAndPrintAverageForNumbers(components: Array<Int>) {
 func calculateAndPrintFactorialForNumbers(components: Array<Int>) {
     if components.count == 1 {
         let number = components[0];
-        if number == 0 {
+        if number < 0 {
+            print("Factorial must be greater than or equal to zero");
+        } else if number == 0 {
             printResult(1);
         } else {
             var factorial = 1;
