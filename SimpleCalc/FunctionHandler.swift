@@ -8,10 +8,14 @@
 
 import Foundation
 
+func availableFunctions() -> Array<String> {
+    return ["count", "avg", "fact"];
+}
+
 func functionForInputString(inputString: String) -> String? {
-    let operationKeyWords : Array = ["count", "avg", "fact"];
+    let functionKeyWords = availableFunctions();
     
-    for keyWord in operationKeyWords {
+    for keyWord in functionKeyWords {
         if inputString.lowercaseString.rangeOfString(keyWord) != nil {
             return keyWord;
         }
