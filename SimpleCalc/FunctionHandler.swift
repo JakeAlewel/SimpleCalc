@@ -20,7 +20,12 @@ func functionForInputString(inputString: String) -> String? {
 }
 
 func calculateAndPrintAverageForNumbers(components: Array<Int>) {
-    
+    var total = 0;
+    for number in components {
+        total += number;
+    }
+    let average : Double = Double(total) / Double(components.count);
+    printResult(average);
 }
 
 func calculateAndPrintFactorialForNumbers(components: Array<Int>) {
@@ -53,8 +58,7 @@ func handleFunction(inputString:String, functionString:String) {
         case "avg":
             calculateAndPrintAverageForNumbers(components!);
         case "fact":
-            calculateAndPrintFactorialForNumbers(components!)
-        
+            calculateAndPrintFactorialForNumbers(components!);
         default:
             print("Invalid Function");
     }

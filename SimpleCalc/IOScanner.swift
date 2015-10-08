@@ -40,3 +40,7 @@ func arrayOfIntsForInputString(inputString: String) -> Array<Int>? {
 func printResult(resultValue : Int) {
     print("Result: \(resultValue)")
 }
+
+func printResult(resultValue : Double) {
+    print("Result: \(resultValue)")
+}
