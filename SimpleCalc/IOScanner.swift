@@ -24,6 +24,19 @@ func convert(incoming: String) -> Int? {
     }
 }
 
+func arrayOfIntsForInputString(inputString: String) -> Array<Int>? {
+    let components = inputString.componentsSeparatedByCharactersInSet(NSCharacterSet.whitespaceCharacterSet());
+    var convertedComponents = Array<Int>();
+    for component in components {
+        let number = convert(component);
+        if number == nil {
+            return nil;
+        }
+        convertedComponents.append(number!);
+    }
+    return convertedComponents;
+}
+
 func printResult(resultValue : Int) {
     print("Result: \(resultValue)")
 }
