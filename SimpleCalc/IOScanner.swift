@@ -15,8 +15,13 @@ func input() -> String {
     return result.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
 }
 
-func convert(incoming: String) -> Int {
-    return Int(incoming)!;
+func convert(incoming: String) -> Int? {
+    let numberFromString = NSNumberFormatter().numberFromString(incoming);
+    if numberFromString == nil {
+        return nil;
+    } else {
+        return numberFromString?.integerValue;
+    }
 }
 
 func printResult(resultValue : Int) {
