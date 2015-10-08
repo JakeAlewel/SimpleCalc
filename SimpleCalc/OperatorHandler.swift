@@ -41,6 +41,6 @@ func handleOperand(firstInputString : String, operand : String) {
         case "%":
             printResult(firstValue! % secondValue!);
         default:
-            print("Invalid Operand Switch");
+            print("Invalid Operand");
     }
 }
